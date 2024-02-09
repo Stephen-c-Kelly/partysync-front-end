@@ -12,12 +12,12 @@ This app helps party hosts invite friends to one location where they can read al
 This application is built using the Python-based Django REST Framework with a React.js frontend and a Heroku/Netlify deployment.
 
 Backend Technologies used:
+
 -- Python
 -- Django
 -- Sql
 -- JWT Auth
 -- Heroku
-
 
 FrontEnd Technologies used
 -- Node.js
@@ -45,9 +45,9 @@ React Map:
 ![Component Hierarchy Diagram](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0d0d167e-a0cb-47eb-83a9-ff10541281a8)
 
 ## Website Links
-Deployed Website: 
+Deployed Frontend: 
 
-Deployed Server:
+Deployed Backend:
 
 Server/Backend GitHub Repo: 
 https://github.com/charlie-bedell/partysync-back-end 
