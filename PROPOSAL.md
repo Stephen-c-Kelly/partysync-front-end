@@ -3,7 +3,6 @@
 
 ![Party](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0929675f-ad85-4f51-b7c0-1e5bed76cf81)
 
-
 ## Project Description
 Party is a full-stack app that uses the Python-based Django REST Framework with a React.js frontend.
 
@@ -29,9 +28,11 @@ FrontEnd Technologies used
 ## MVP User Stories & Stretch Goals
 https://trello.com/b/Vdd8iW0j
 
-#### Wireframes
-![image](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/69ac315a-451b-4708-b988-8ee19e51bb47)
+#### Mobile-First Designs
+![PartySync](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/1ac50448-285b-4a3e-a734-fe53d5ecb6e0)
 
+#### PartySYNC Wizard
+![image](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/69ac315a-451b-4708-b988-8ee19e51bb47)
 
 ## Technical Architecture
 ERD Designs: 
