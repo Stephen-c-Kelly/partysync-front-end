@@ -1,4 +1,6 @@
 # PartySync 
+
+
 # Host parties, invite friends, collab on tunes, all in one app
 
 ![Party](https://github.com/Stephen-c-Kelly/partysync-front-end/assets/149907841/0929675f-ad85-4f51-b7c0-1e5bed76cf81)

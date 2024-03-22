@@ -11,9 +11,6 @@ const Login = ({ updateUser }) => {
 			<Image />
 			<Text />
 			<LoginForm updateUser={updateUser} />
-			<Link to="/user/signup">
-				<SquareBlueButton text="Sign Up" />
-			</Link>
 		</div>
 	);
 };

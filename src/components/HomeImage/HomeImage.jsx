@@ -3,7 +3,7 @@ import React from 'react';
 
 const styles = {
     ImageContainer: {
-      position: 'absolute', // Ensure it's positioned absolutely relative to its nearest positioned ancestor or the body
+      position: 'fixed', // Ensure it's positioned absolutely relative to its nearest positioned ancestor or the body
       top: '0',
       left: '0',
       width: '100vw', // 100% of the viewport's width

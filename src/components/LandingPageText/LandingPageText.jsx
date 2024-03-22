@@ -1,4 +1,5 @@
 import React from 'react';
+import image from '../../assets/PartySYNC.png'
 
 const styles = {
   container: {
@@ -20,15 +21,13 @@ const styles = {
 };
 
 const defaultProps = {
-  text: 'Party SYNC',
+  image: image,
 };
 
 const Text = (props) => {
   return (
     <div style={styles.container}> {/* This is the new container for centering */}
-      <div style={styles.text}>
-        {props.text ?? defaultProps.text}
-      </div>
+     
     </div>
   );
 };

@@ -30,6 +30,7 @@ export const getHostedParties = async () => {
   
   export const createParty = async (partyData) => {
     try {
+      if (!partyData.end_time) partyData.end_time = partyData.start_time;
       const response = await api.post("/party/", partyData);
       return response.data;
     } catch (error) {

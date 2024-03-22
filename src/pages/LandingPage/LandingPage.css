@@ -1,12 +1,19 @@
-.image {
+/* .image {
     top: -8px;
     left: -6px;
     width: 405px;
     height: 684px;
     border-radius: 8px;
-    background-image: url(./image.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
+   */
+
+@media (max-width: 600px) {
+  .videoResponsive {
+    object-fit: contain;
+    width: auto;
+    height: 100%;
+  }
+}

@@ -7,10 +7,11 @@ import PartyFormTextArea from "../FormFields/PartyFormTextArea";
 import RespondToInvite from "../RespondToInvite/RespondToInvite";
 
 const PartyForm = (props) => {
-	const { handleClick, isReadOnly, partyDetails, updatePartyFormData, isInvite, inviteId} = props;
+	const { handleClick, isReadOnly, partyDetails, updatePartyFormData, isInvite, inviteId, isPending, buttonText} = props;
 
   const hasEndDate = ((!isReadOnly) || (isReadOnly && partyDetails.endDate));
-
+  const pendingRSVP = (isPending || !isReadOnly);
+  
 	return (
     <div className='m-2 p-2 bg-white'>
       {isReadOnly && <h2 className='m-2 font-bold'>{partyDetails.name}</h2>}
@@ -57,14 +58,13 @@ const PartyForm = (props) => {
           fieldValue={partyDetails.description}
           placeholderText="Info"
         />
-        {!isReadOnly && (
+        {pendingRSVP && (
           <SquareBlueButton
-            disabled={isReadOnly}
             handleClick={(e) => {
               e.preventDefault();
               handleClick();
               
-            }} text="Send Out Invites">
+            }} text={buttonText || "Send Out Invites"}>
           </SquareBlueButton>
           
         )}

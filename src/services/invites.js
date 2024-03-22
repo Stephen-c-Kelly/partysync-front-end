@@ -20,8 +20,8 @@ export const getInvites = async () => {
   
   export const inviteStatus = async (id,inviteData) => {
     try {
-      const response = await api.patch(`/profile/invite/${id}/response/`, inviteData);
-      console.log(`user responded to invite`, inviteData)
+      const response = await api.patch(`/profile/invite/${id}/response/`, {"status": inviteData});
+      console.log(`user responded to invite`, inviteData);
       return response.data;
     } catch (error) {
       throw error;

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Image from '../../components/HomeImage/HomeImage';
 import PartyForm from '../../components/PartyForm/PartyForm';
 import { createParty } from '../../services/party';
+import HorizontalDivider from '../../components/HorizontalDivider/HorizontalDivider';
 
 const NewParty = (props) => {
 
