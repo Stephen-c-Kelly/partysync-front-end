@@ -90,5 +90,4 @@ is a change
 `npx tailwindcss -i ./src/input.css -o ./src/output.css --watch`
 
 ## spin up the dev server
-
-`npm run dev`
+`vite` or `npm run dev`
