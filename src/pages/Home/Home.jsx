@@ -6,6 +6,8 @@ import PartyDetail from '../../components/PartyDetail/PartyDetail';
 import { getHostedParties, getParties, getParty } from '../../services/party';
 import { getInvites } from '../../services/invites';
 import { getProfile } from '../../services/profile';
+import HorizontalDivider from '../../components/HorizontalDivider/HorizontalDivider';
+import { redirect } from 'react-router-dom';
 
 
 const Home = (props) => {
@@ -39,8 +41,8 @@ const Home = (props) => {
         let hosted_parties = await getHostedParties();
         hosted_parties = hosted_parties.map((party) => {return {party: party};});
         let allParties = Array.from(invited_parties).concat(hosted_parties);
+        allParties.sort((a, b) => new Date(a.party.start_time) - new Date(b.party.start_time));
         allParties = allParties.filter((party) => {return filterConditions[`${partyFilter}`](party);});
-        console.log('after filter: ', allParties);
         setAllMyParties([
          ...allParties
         ]);
@@ -57,11 +59,17 @@ const Home = (props) => {
     setPartyFilter(filter);
   };
 
+  const redirectToInvites = () => {
+    window.location.href='/myinvites';
+  };
+
 	return (
 		<div>
 			<PurpleNavBar handleChange={changePartyFilter}/>
-      {allMyParties?.map((party) => {
-        return <PartyDetail partyDetails={party.party}/>;
+      <HorizontalDivider />
+      {allMyParties?.map((party, idx) => {
+        const isPending = party.status ? party.status == 'Pending' : false;
+        return <PartyDetail key = {idx} partyDetails={party.party} isPending={isPending} handleClick={redirectToInvites}/>;
       })}
 			<Image />
 		</div>

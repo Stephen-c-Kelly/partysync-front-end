@@ -1,41 +1,36 @@
-import React,{ useState } from "react"
-import SquareBlueButton from "../Buttons/SquareBlueButton";
+import React, { useState } from "react";
+import InviteButton from "../Buttons/InviteButton";
 import { inviteStatus } from "../../services/invites";
 
+const RespondToInvite = ({ invite_id }) => {
+  const [selectedResponse, setSelectedResponse] = useState('');
 
-const RespondToInvite = (props) => {
-  const { invite_id } = props
-  
   const handleChange = (response) => {
     console.log(`User responded with: ${response}`);
-    inviteStatus(invite_id, response)
-  }
- const additionalClasses = "px-5"
+    setSelectedResponse(response); 
+    inviteStatus(invite_id, response);
+  };
+
+  const responses = ['Yes', 'No', 'Maybe'];
 
   return (
-    <div className="flex flex-col items-center p-4 border-2 border-white bg-white ">
-      
-    <h1 className="mb-4">How would you like to respond to the invite?</h1>
-      <div className="flex flex-1 justify-center my-4">
-        <div className="">
-        <SquareBlueButton handleClick={(e) => {
-          e.preventDefault()
-          handleChange('Yes');
-        }
-        } additionalClasses={additionalClasses} text="Yes" />
-        </div>
-        <SquareBlueButton handleClick={(e) => {
-        
-          e.preventDefault()
-          handleChange('No');
-        }  
-        }  additionalClasses={additionalClasses}  text="No" />
-        <SquareBlueButton handleClick={(e) => {
-        
-        e.preventDefault()
-        handleChange('Maybe');
-      }  
-      }  additionalClasses={additionalClasses}  text="Maybe" />
+    <div className="flex flex-col items-center p-4 border-2 border-white bg-white">
+      <h1 className="mb-4">How would you like to respond to the invite?</h1>
+      <div className="flex justify-center my-4 gap-2">
+        {responses.map((response) => (
+          <InviteButton
+            key={response}
+            handleClick={(e) => {
+              e.preventDefault();
+              if (!selectedResponse) { 
+                handleChange(response);
+              }
+            }}
+            text={response}
+            additionalClasses={`px-5 ${selectedResponse === response ? 'border-black' : ''}`} // Add border-black class if this button was clicked
+            disabled={selectedResponse !== '' && selectedResponse !== response} // Disable other buttons
+          />
+        ))}
       </div>
     </div>
   );

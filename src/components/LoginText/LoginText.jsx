@@ -1,16 +1,19 @@
 import React from 'react';
+import './LoginText.css'
 
 const styles = {
   Text: {
     color: '#ff9500',
-    fontSize: '34px',
-    fontFamily: 'Roboto',
+    fontSize: '43px',
+    fontFamily: "Shrikhand",
     fontWeight: '500',
     lineHeight: '42px',
     position: 'absolute',
-    right: '52px',
-    top: '184px'
-  },
+    right: '13px',
+    top: '184px',
+    WebkitTextStroke: '1px brown',
+    letterSpacing: '0.5px'
+}
 };
 
 const defaultProps = {

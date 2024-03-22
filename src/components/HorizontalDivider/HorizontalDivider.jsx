@@ -4,7 +4,7 @@ const styles = {
   HorizontalDivider: {
     top: '123px',
     left: '-7px',
-    width: '382px',
+    width: '100%',
     height: '4px',
     backgroundColor: '#c1c1c1',
     borderRadius: '2px',

@@ -2,7 +2,7 @@ import PartyForm from "../PartyForm/PartyForm";
 
 const PartyDetail = (props) => {
 
-	const { partyDetails } = props;
+	const { partyDetails, handleClick, isPending } = props;
   const partyInformation = {
     name: partyDetails.party_name,
     location: partyDetails.location,
@@ -16,7 +16,10 @@ const PartyDetail = (props) => {
 		<div>
 			<PartyForm
         isReadOnly={true}
+        isPending={isPending}
+        handleClick={handleClick}
         partyDetails={partyInformation}
+        buttonText='RSVP'
       />
 		</div>
 	);

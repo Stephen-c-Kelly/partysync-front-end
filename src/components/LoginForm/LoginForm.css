@@ -1,0 +1,99 @@
+.form {
+  width: 300px; /* Fixed width for the form */
+  padding: 64px 15px 24px;
+  margin-top: 201px; /* Adjust as needed */
+  margin-left: 30%; /* Increase to push more to the right */
+  margin-right: auto;
+  position: relative; /* Keeps the form within the normal document flow */
+  max-width: 100%; /* Ensures form does not exceed the width of its container */
+}
+
+.form .control {
+  margin-bottom: 24px;
+}
+
+.form .control input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #4405050a;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  border-radius: 11px;
+}
+
+.form .control input:hover,
+.form .control input:focus {
+  outline: none;
+}
+
+.form .btn {
+  width: 100%;
+  display: block;
+  padding: 14px 16px;
+  background: transparent;
+  color: #fff;
+  font-family: monospace, serif;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-left: 87px;
+}
+
+.text-white {
+  color: #fff; /* Ensure it's visible against the form's background */
+}
+
+.cursor-pointer {
+  cursor: pointer; /* Ensures it's clear the text is clickable */
+}
+
+.text-center {
+  text-align: center; /* Centers the text within its container */
+}
+
+.mt-4 {
+  margin-top: 16px; /* Adds some space above the text */
+}
+
+.form .control input {
+  color: #fff; /* Sets the text color to white */
+  /* Other styles */
+}
+
+.form .control input::placeholder {
+  color: #fff; /* Sets the placeholder text color to white */
+}
+
+@media (min-width: 432px) {
+  .form {
+    margin-left: 40%; /* Adjust as needed for medium screens */
+  }
+}
+
+@media (min-width: 632px) {
+  .form {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 832px) {
+  .form {
+    margin-left: 40%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    margin-left: 40%; /* Adjust as needed for larger screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    margin-left: 77%;
+  }
+}
